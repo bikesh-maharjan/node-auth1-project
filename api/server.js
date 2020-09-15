@@ -39,7 +39,7 @@ server.use(cors());
 
 server.use(session(sessionConfig));
 
-server.use("api/users", protected, userRouter);
+server.use("api/users", protected, usersRouter);
 server.use("api/auth", authRouter);
 
 server.get("/", (req, res) => {
