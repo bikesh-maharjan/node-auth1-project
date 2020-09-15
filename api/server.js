@@ -8,7 +8,7 @@ const session = require("express-session");
 const KnexSessionStore = require("connect-session-knex")(session);
 
 const usersRouter = require("../users/users-router.js");
-const authRouter = require("../users/auth-router.js");
+const authRouter = require("../auth/auth-router.js");
 
 const dbConnection = require("../database/connection");
 const connection = require("../database/connection");
