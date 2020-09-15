@@ -32,7 +32,7 @@ router.post("/login", (req, res) => {
   const isValid = validateCredentials(creds);
 
   if (isValid) {
-    Users.findBy({ username: creds.username }) //returns back an array
+    Users.getBy({ username: creds.username }) //returns back an array
       .then(([user]) => {
         if (user && bcryptjs.compareSync(creds.password, user.password)) {
           req.session.username = user.username;

@@ -1,12 +1,12 @@
 const db = require("../database/connection.js");
 
 module.exports = {
-  get,
+  find,
   add,
   getBy,
 };
 
-function get() {
+function find() {
   return db("users");
 }
 
